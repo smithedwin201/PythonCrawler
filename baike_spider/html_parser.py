@@ -9,7 +9,7 @@ class HtmlParser(object):
         links = soup.find_all('li',class_='related-exp-link')
         # .find_all(href=re.compile(r"/article/"))
         for link in links:
-            li=link.find('a')#在查询结果中再找找
+            li=link.find('a')#在查询结果中再找
             new_url = li['href']
             new_full_url = urllib.parse.urljoin(page_url, new_url)
             # Py3中用到的模块名称变为urllib.parse
